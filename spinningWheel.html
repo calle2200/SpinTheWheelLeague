@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin Wheel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="teamOne">
+    <h1 class="teamTitle">Lag 1</h1>
+    <div class="players"></div>
+  </div>
+
+  <span class="arrow"></span>
+  <div class="container">
+    <button id="spin">Spin</button>
+  </div>
+
+  <div class="names" id="namesContainer">
+    <div class="nameItem" onclick="addNameToWheel(this)">Dedona</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">FatNeek</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Stahlet</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Simpa</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Skalander</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">LolSpelare</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">2CamelBalls</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Luigi</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Rez</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Fnorkos</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Saedobity</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Moses</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Guest1</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Guest2</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Guest3</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Guest4</div>
+    <div class="nameItem" onclick="addNameToWheel(this)">Guest5</div>
+  </div>
+  <button id="addButton">Add</button>
+
+  <div class="teamTwo">
+    <h1 class="teamTitle">Lag 2</h1>
+    <div class="players"></div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>Grattis!!!</p>
+      <button id="okButton">OK</button>
+    </div>
+  </div>
+
+  <script src="js/spinningWheel.js"></script>
+</body>
+</html>

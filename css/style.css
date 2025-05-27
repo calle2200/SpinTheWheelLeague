@@ -1,0 +1,224 @@
+*{
+	box-sizing:border-box;
+}
+
+body{
+	margin:0;
+	padding:0;
+	background: linear-gradient(10deg, #101820, #6B009A);
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	height:100vh;
+	overflow:hidden;
+}
+
+.teamOne {
+	background: #C0C0C0;
+	border: 4px solid #CD7F32;
+	border-radius: 10px;
+	margin-right: 200px;
+	padding: 10px;
+	width: 350px;
+	height: 500px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.teamTwo {
+	background: #C0C0C0;
+	border: 4px solid #CD7F32;
+	border-radius: 10px;
+	margin-left: 200px;
+	padding: 10px;
+	width: 350px;
+	height: 500px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.teamTitle {
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	color: #101820;
+}
+
+.players {
+	font-size: 22px;
+}
+
+/* Styling för spelarna i Lag 1 */
+.team-one-player {
+	color: blue; /* Textfärg för Lag 1 */
+	font-size: 20px; /* Textstorlek */
+	font-weight: bold; /* Fetstil */
+	margin-bottom: 10px; /* Avstånd mellan spelarna */
+  }
+  
+  .team-one-image {
+	border: 2px solid blue; /* Blå kant runt bilderna i Lag 1 */
+	border-radius: 50%; /* Gör bilderna runda */
+	width: 50px; /* Bredd för bilden */
+	height: 50px; /* Höjd för bilden */
+	margin-left: 10px; /* Avstånd mellan namn och bild */
+  }
+  
+  /* Styling för spelarna i Lag 2 */
+  .team-two-player {
+	color: green; /* Textfärg för Lag 2 */
+	font-size: 20px; /* Textstorlek */
+	font-weight: bold; /* Fetstil */
+	margin-bottom: 10px; /* Avstånd mellan spelarna */
+  }
+  
+  .team-two-image {
+	border: 2px solid green; /* Grön kant runt bilderna i Lag 2 */
+	border-radius: 50%; /* Gör bilderna runda */
+	width: 50px; /* Bredd för bilden */
+	height: 50px; /* Höjd för bilden */
+	margin-left: 10px; /* Avstånd mellan namn och bild */
+  }
+
+.container{
+	width:500px;
+	height:500px;
+	background-color: #ccc;
+	border-radius:50%;
+	border:15px solid #dde;
+	position: relative;
+	overflow: hidden;
+	transition: transform 4s ease-out;
+	margin-top: -150px;
+}
+
+.container div.segment {
+	height: 51%;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: #fff;
+  }
+
+.arrow{
+	position: absolute;
+	top:6%;
+	left:50%;
+	transform: translateX(-50%);
+	color:#fff;
+}
+
+.arrow::before{
+	content:"\1F817";
+	font-size:70px;
+}
+
+.names {
+	position: absolute;
+	width: 180px;
+	height: 250px;
+	top:70%;
+	left:50%;
+	padding: 5px;
+	background: #C0C0C0;
+	border: 3px solid #CD7F32;
+	border-radius: 6px;
+	transform: translateX(-50%);
+	overflow-y: scroll;
+}
+
+.nameItem {
+	cursor: pointer;
+}
+
+.nameItem:hover {
+	background-color: #979797;
+}
+
+#addButton {
+	position: absolute;
+	top:93.8%;
+	left:56.5%;
+	height: 30px;
+	width: 50px;
+	transform: translateX(-50%);
+	background: #C0C0C0;
+	border: 2px solid #CD7F32;
+	border-radius: 8px;
+	color: #101820;
+	font-size: 17px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+#addButton:hover {
+	background: #aaaaaa;
+}
+
+#addButton:active {
+	border: 5px solid #bb752e;
+	font-weight: bold;
+}
+
+#spin{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	z-index:10;
+	background-color: #e2e2e2;
+	text-transform: uppercase;
+	border:8px solid #fff;
+	font-weight:bold;
+	font-size:20px;
+	color:#a2a2a2;
+	width: 80px;
+	height:80px;
+	font-family: sans-serif;
+	border-radius:50%;
+	cursor: pointer;
+	outline:none;
+	letter-spacing: 1px;
+}
+
+
+.modal {
+    display: none; /* Starta som dold */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Halvtransparent bakgrund */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .modal-content p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #okButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
